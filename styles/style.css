@@ -1,0 +1,405 @@
+
+/*resetando CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  /*comando p/ não deixar elementos romperem a box na qual está*/
+  /*box-sizing: border-box;*/
+}
+
+body {
+  width: 1680px;
+  max-height: 1780px; /*9.500px*/
+  background-color: rgb(20, 20, 20);
+  display: grid;
+  color: #fff;
+}
+
+/*Estrutura do Grid inicial:
+
+1 coluna 
+4 linhas
+
+linha1: menu-initial;
+tamanho: 1342 x 68
+
+linha2: featured-series;
+tamanho: 1342 x 755
+
+linha3: slider;
+tamanho de cada slider: 1342 x 200
+teremos três sliders
+obs: fazer outro grid
+
+linha4: footer
+tamanho: 1090 x 240
+obs: fazer outro grid
+*/
+/*-----------------------Nomeando grid areas--------------------------*/
+
+.block-one {
+  grid-area: block-one;
+}
+.block-two {
+  grid-area: block-two;
+}
+
+/*---------------end nomeando grid areas-----------------------------*/
+
+/*----------->>>>>>>>>Instanciando o Grid Area<<<<<<<<-------------------*/
+body {
+  grid-template-areas: 
+  "block-one"
+  "block-two"
+  ;
+  grid-template-columns: 100vw; 
+  grid-template-rows:  1400px 240px;
+  }
+  
+  /*----------->>>>>>>>>End Instanciando o Grid Area<<<<<<<<-------------------*/
+  
+
+  /*----------->>>>>>>>>Ajustando Tamanho das Imagens<<<<<<<<-------------------*/
+  
+  .logo {
+    max-width: 120px;
+    max-height: 75px;
+  }
+
+    
+
+  .lupa {
+    max-width: 18px;
+    max-height: 22px;
+  }
+
+  .infantil {
+  max-width: 65px;
+  max-height: 16px;  
+  }
+
+  .presente {
+    max-width: 21px;
+    max-height: 21px;
+  }
+
+  .notificacao {
+    max-width: 17px;
+    max-height: 16px;
+  }
+
+  .perfil {
+    max-width: 52px;
+    max-height: 32px;
+  }
+
+  
+
+  .serie-abertura {
+    max-width: 388px;
+    max-height: 155px;
+
+  }
+
+  .img-button {
+    max-width: 25px;
+    max-height: 25px;
+  }
+
+
+  .series {
+    max-width: 218px;
+    max-height: 123px;
+  }
+
+
+  /*----------->>>>>>>>>End-Ajustando Tamanho das Imagens<<<<<<<<-------------------*/
+  
+
+  .header  {
+    max-width: 100vw;
+    max-height: 70px;
+    display: flex;
+    
+  }
+  
+  
+  /*----------->>>>>>>>>Criando Grid do block-one<<<<<<<<-------------------*/
+
+  .block-one {
+    display: grid;
+    grid-template-columns: 1680px;
+    grid-template-rows: 70px 860px 460px;
+    max-width: 1680px;
+    max-height: 1450px;
+  }
+
+  .header {
+    display: grid;
+    grid-row: 1;
+  }
+
+  .featured-series {
+    display: grid;
+    grid-row: 1 / 2;
+  }
+
+  .slider {
+    display: grid;
+    grid-row: 2/3;
+  }
+
+
+
+
+
+
+
+   /*----------->>>>>>>>>End Criando Grid do block-one<<<<<<<<-------------------*/
+
+
+   .header {
+     position: relative;
+   }
+
+   .menu-initial {
+     margin-left: 30px;
+   }
+
+   .menu-one {
+    margin-left: 140px;
+    margin-top: -40px;
+   }
+
+   .menu-one a {
+     margin-right: 5px;
+    text-decoration: none;
+    color: #fff;
+   }
+
+   .menu-two {
+    
+    position: relative;
+    left: 81vw;
+    bottom: 30px;
+    
+   }
+
+   .name-series, .description-series, .button-description, .slider {
+     margin-left: 40px;
+   }
+
+   .iconify {
+     margin-right: 1vw;
+     
+   }
+
+   .infantil {
+     margin-right: 4vw;
+   }
+
+   .perfil {
+     position: relative;
+     top: 4px;
+   }
+
+   .featured-series {
+    width: 100vw;
+    height: 100vh;
+  }
+
+   .first-series {
+    
+    max-width: 100vw;
+    max-height: 860px;
+    margin-top: -75px;
+  }
+
+  .marcopolo {
+   
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .name-series {
+    position: relative;
+    bottom: 580px;
+  }
+
+  .serie-abertura {
+    opacity:0.6;
+    filter:alpha(opacity=60);
+    
+  }
+
+  .description-series {
+    position: relative;
+    bottom: 540px;
+    color: #fff;
+  }
+
+  
+
+  .button-description {
+    display: flex;
+    position: relative;
+    bottom: 500px;
+  }
+
+  .watch {
+    width: 122px;
+    height: 43px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    margin-right: 8px;
+    opacity:1;
+    filter:alpha(opacity=10);
+    appearance: none;
+    border: 0;
+    cursor: pointer;
+    
+  }
+
+  .information {
+    width: 176px;
+    height: 43px;
+    align-items: center;
+    justify-content: center;
+    appearance: none;
+    border: 0;
+    cursor: pointer;
+    background-color: rgba(109,109,110,0.7);
+    border-radius: 10px;
+    opacity:9;
+    filter:alpha(opacity=90);
+    color: white;
+    
+  }
+
+  .p-button {
+   
+    position: relative;
+    bottom: 7px;
+  }
+
+
+  .age{
+    float: right;
+    position: relative;
+    left: 39.3vw;
+  }
+
+  .slider {
+    position: relative;
+    bottom: 11vw;
+    
+  }
+
+  .slider p {
+    padding-bottom: 10px;
+  }
+
+  .slider-two, .slider-three {
+    margin-top: 40px;
+    padding-top: 10px;
+  }
+
+  .block-two a {
+    color: #fff;
+    text-decoration: none;
+
+  }
+
+  .footer-links {
+    margin-top: 10px;
+    
+  }
+
+  .footer-links a {
+    margin-right: 120px;
+    line-height: 40px;
+  }
+  
+
+  .footer-button button {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 135px;
+    height: 35px;
+    cursor: pointer;
+    color: #fff;
+    border: solid 1px grey;
+    background-color: rgb(20, 20, 20);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .footer {
+    display: grid;
+  }
+
+  .social-links {
+    grid-area: social-links;
+  }
+
+  .footer-links {
+    grid-area: footer-links;
+  }
+
+  .footer-button {
+    grid-area: footer-button;
+  }
+
+  .footer-copyright {
+    grid-area: footer-copyright;
+  }
+
+
+.footer {
+  
+  /*----------->>>>>>>>>Instanciando o Grid Area<<<<<<<<-------------------*/
+
+  grid-template-areas: 
+  "..... social-links ........."
+  "..... footer-links ........."
+  "..... footer-button ........"
+  "..... footer-copyright ....."
+  ;
+  grid-template-columns: 350px 980px 350px; 
+  grid-template-rows:  30px 135px 35px 18px;
+  
+  }
+  
+  /*----------->>>>>>>>>End Instanciando o Grid Area<<<<<<<<-------------------*/
+  
+  .a-two {
+    position: relative;
+    right: 68px;
+  }
+
+  .a-eight{
+    position: relative;
+    left: 40px;
+  }
+
+  .a-ten {
+    position: relative;
+    right: 16px;
+  }
+
+  .a-eleven {
+    position: relative;
+    left: 68px;
+  }
+
+  .a-twelve{
+    position: relative;
+    left: 16px;
+  }
+
+
+
+  
+  
